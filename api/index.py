@@ -137,4 +137,3 @@ def cancel():
 # Vercel needs this
 def handler(request, *args, **kwargs):
     return app(request.environ, start_response)
-
