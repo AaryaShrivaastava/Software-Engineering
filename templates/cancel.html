@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cancel</title></head>
+<body>
+<h2>Cancel Booking</h2>
+
+<form method="post">
+    Booking ID: <input name="booking_id"><br><br>
+    <button>Cancel</button>
+</form>
+
+{% if status == True %}
+<p style="color:green;">Booking cancelled.</p>
+{% elif status == False %}
+<p style="color:red;">Invalid booking ID or already cancelled.</p>
+{% endif %}
+
+<br><a href="/">Back</a>
+</body>
+</html>

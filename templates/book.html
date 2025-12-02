@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Book Ticket</title></head>
+<body>
+<h2>Book Ticket</h2>
+
+<form method="post">
+    Name: <input name="name"><br><br>
+    Age: <input name="age"><br><br>
+    Trip ID: <input name="trip_id"><br><br>
+    Seats: <input name="seats"><br><br>
+    <button>Book</button>
+</form>
+
+{% if booking is not none %}
+<h3>Booking Successful!</h3>
+Booking ID: {{ booking.booking_id }}<br>
+Passenger: {{ booking.passenger_name }}<br>
+Seats: {{ booking.num_seats }}<br>
+Fare: {{ booking.total_fare }}<br>
+{% endif %}
+
+<br><a href="/">Back</a>
+</body>
+</html>

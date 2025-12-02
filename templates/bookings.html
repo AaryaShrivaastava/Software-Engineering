@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Bookings</title></head>
+<body>
+<h2>All Bookings</h2>
+
+<table border="1">
+<tr>
+    <th>ID</th><th>Name</th><th>Age</th><th>Trip</th>
+    <th>Seats</th><th>Fare</th><th>Status</th>
+</tr>
+{% for b in bookings %}
+<tr>
+    <td>{{ b.booking_id }}</td>
+    <td>{{ b.passenger_name }}</td>
+    <td>{{ b.passenger_age }}</td>
+    <td>{{ b.trip_id }}</td>
+    <td>{{ b.num_seats }}</td>
+    <td>{{ b.total_fare }}</td>
+    <td>{{ b.status }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<br><a href="/">Back</a>
+</body>
+</html>
